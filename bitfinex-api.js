@@ -365,3 +365,4 @@ Bitfinex = function () {
 	};
 };
 bitfinex = new Bitfinex();
+console.log('You now have an instance of the bitfinex API object available');
