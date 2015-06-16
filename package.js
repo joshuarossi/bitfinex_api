@@ -14,7 +14,7 @@ Package.onUse(function(api) {
   api.use(['http', 'mongo', 'livedata', 'meteor'], ['server']);
   api.use(['templating', 'iron:router@1.0.9', 'meteor-platform']);
   api.versionsFrom('1.1.0.2');
-  api.addFiles(['bitfinex-api.js', 'server/methods.js', 'keys.js'], 'server');
+  api.addFiles(['bitfinex-api.js', 'server/methods.js'], 'server');
   api.addFiles(['client/authenticate.html', 'client/authenticate.js','client/router.js'], 'client');
   api.export(['bitfinex', 'Bitfinex'], 'server');
 });
