@@ -16,7 +16,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
   api.addFiles(['bitfinex-api.js', 'server/methods.js', 'keys.js'], 'server');
   api.addFiles(['client/authenticate.html', 'client/authenticate.js','client/router.js'], 'client');
-  api.export(['bitfinex', 'Bitfinex', 'key', 'secret'], 'server');
+  api.export(['bitfinex', 'Bitfinex'], 'server');
 });
 
 Package.onTest(function(api) {
