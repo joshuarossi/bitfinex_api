@@ -1,3 +1,5 @@
+crypto = Npm.require('crypto')
+
 Bitfinex = function () {
 	var _this = this;
 //	Collections used to manage Bitfinex updating data
