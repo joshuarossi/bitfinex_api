@@ -260,7 +260,7 @@ Bitfinex = function () {
 			params['until'] = until;
 		}
 		if (limit){
-			params['until'] = until;
+			params['limit'] = limit;
 		}
 		if (wallet && ["trading", "exchange", "deposit"].indexOf(wallet) != -1){
 			params['wallet'] = wallet;
@@ -365,6 +365,15 @@ Bitfinex = function () {
 		var result = _this.makeAuthenticatedRequest(endpoint, {});
 		return result.data;
 	};
+	this.makeWithdrawal = function(type, wallet, amount, params) {
+		var endpoint = '/withdrawal';
+		params.withdraw_type = type;
+		params.walletselected = wallet;
+		params.amount = amount;
+		var result = _this.makeAuthenticatedRequest(endpoint, params);
+		return result.data;
+	}
+
 };
 bitfinex = new Bitfinex();
 console.log('You now have an instance of the bitfinex API object available');
